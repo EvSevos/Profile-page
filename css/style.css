@@ -1,0 +1,113 @@
+@import url(bootstrap-reboot.min.css);
+@import url(bootstrap-grid.min.css);
+@import url(bootstrap.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway:wght@600&display=swap");
+/*--VAR-*/
+@keyframes jump {
+  0% {
+    bottom: 77px; }
+  100% {
+    bottom: 50px; } }
+/*---------------------*/
+.bg-rgba {
+  background-color: rgba(76, 75, 92, 0.89);
+  color: #fff;
+  width: 100%; }
+
+/*-----------------------------------*/
+header {
+  position: fixed;
+  background-color: rgba(27, 30, 33, 0.85);
+  top: 0;
+  width: 100%;
+  z-index: 3; }
+  header .bg-light {
+    background-color: transparent !important; }
+  header .navbar .navbar-brand {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 12px; }
+    header .navbar .navbar-brand:hover {
+      color: red; }
+    header .navbar .navbar-brand.active {
+      color: red; }
+  header .navbar .navbar-nav .nav-item .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif; }
+    header .navbar .navbar-nav .nav-item .nav-link:after {
+      display: block;
+      content: "";
+      border-bottom: none;
+      width: 80%;
+      height: 2px;
+      margin-top: 5px;
+      visibility: hidden;
+      margin-left: 10%;
+      background-color: yellow; }
+    header .navbar .navbar-nav .nav-item .nav-link:hover, header .navbar .navbar-nav .nav-item .nav-link .active {
+      color: yellow; }
+      header .navbar .navbar-nav .nav-item .nav-link:hover:after, header .navbar .navbar-nav .nav-item .nav-link .active:after {
+        visibility: visible; }
+  @media screen and (max-width: 992px) {
+    header .navbar .navbar-nav .nav-item .nav-link:after {
+      width: 0;
+      height: 0;
+      margin-top: 0; }
+    header .navbar .navbar-nav .nav-item .nav-link:hover, header .navbar .navbar-nav .nav-item .nav-link .active {
+      color: yellow; }
+      header .navbar .navbar-nav .nav-item .nav-link:hover:after, header .navbar .navbar-nav .nav-item .nav-link .active:after {
+        visibility: visible; } }
+  header .navbar .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+    background-color: #fff; }
+
+/* .navbar-light .navbar-toggler-icon {
+   background-image: none;
+ }*/
+/*-----------------------*/
+.upper {
+  background: url("../images/bg_upper.jpg") no-repeat fixed center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  z-index: 1; }
+  .upper .bg-rgba {
+    height: 100vh;
+    display: flex;
+    align-items: center; }
+    .upper .bg-rgba .main {
+      margin: auto;
+      width: 500px;
+      flex-direction: column; }
+      .upper .bg-rgba .main h1 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 36px; }
+        .upper .bg-rgba .main h1 span {
+          color: yellow;
+          font-weight: 300; }
+  @media screen and (max-width: 992px) {
+    .upper {
+      background: url("../images/bg_upper_mob_03.jpg") no-repeat fixed center;
+      background-size: cover;
+      height: 100vh; } }
+  .upper .btn {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: .6rem;
+    color: #fff;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
+    .upper .btn:hover, .upper .btn .active {
+      color: yellow;
+      border: 1px solid yellow; }
+  .upper .btn-link {
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */

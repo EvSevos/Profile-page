@@ -1,0 +1,191 @@
+@import "bootstrap-reboot.min.css";
+@import "bootstrap-grid.min.css";
+@import "bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway:wght@600&display=swap');
+
+/*--VAR-*/
+$font-main: 'Open Sans', sans-serif;
+$font-sub: 'Montserrat', sans-serif;
+$font-sub2: 'Raleway', sans-serif;
+$main-color: #222222;
+$main-size: 16px;
+
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 77px
+  }
+  100% {
+    bottom: 50px
+  }
+}
+
+/*---------------------*/
+
+.bg-rgba {
+  background-color: rgba(76, 75, 92, 0.89);
+  color: #fff;
+  width: 100%;
+}
+
+
+/*-----------------------------------*/
+header {
+  position: fixed ;
+  background-color: rgba(27, 30, 33, 0.85);
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  .bg-light {
+    background-color: transparent !important;
+  }
+
+  .navbar {
+
+    .navbar-brand {
+      color: #fff;
+      font-family: $font-sub2;
+      font-size: 12px;
+
+      &:hover {
+        color: red;
+      }
+
+      &.active {
+        color: red;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          color: #fff;
+          text-transform: uppercase;
+          font-family: $font-sub2;
+
+          &:after {
+            display: block;
+            content: "";
+            border-bottom: none;
+            width: 80%;
+            height: 2px;
+            margin-top: 5px;
+            visibility: hidden;
+            margin-left: 10%;
+            background-color: yellow;
+          }
+
+          &:hover, .active {
+            color: yellow;
+
+            &:after {
+              visibility: visible;
+
+            }
+          }
+
+        }
+        @include max-screen(992px) {
+          .nav-link {
+            &:after {
+              width: 0;
+              height: 0;
+              margin-top: 0;
+            }
+
+            &:hover, .active {
+              color: yellow;
+
+              &:after {
+                visibility: visible;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .navbar-toggler {
+      color: #fff;
+      border-color: #fff;
+      background-color: #fff;
+    }
+  }
+}
+
+/* .navbar-light .navbar-toggler-icon {
+   background-image: none;
+ }*/
+
+/*-----------------------*/
+.upper {
+  background: url('../images/bg_upper.jpg') no-repeat fixed center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+
+
+  .bg-rgba {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .main {
+      margin: auto;
+      width: 500px;
+      flex-direction: column;
+      h1{
+        font-family: $font-main;
+        font-size: 36px;
+        span{
+          color: yellow;
+          font-weight: 300;
+
+        }
+      }
+    }
+  }
+
+  @include max-screen(992px) {
+    background: url('../images/bg_upper_mob_03.jpg') no-repeat fixed center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .btn {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: .6rem;
+    color: #fff;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover, .active {
+      color: yellow;
+      border: 1px solid yellow;
+    }
+  }
+
+  .btn-link {
+    font-weight: 400;
+    font-family: $font-main;
+    color: #fff;
+    text-decoration: none;
+
+  }
+
+
+}
+
+
