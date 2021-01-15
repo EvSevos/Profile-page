@@ -19,10 +19,10 @@ $main-size: 16px;
 
 @keyframes jump {
   0% {
-    bottom: 77px
+    bottom: 40px
   }
   100% {
-    bottom: 50px
+    bottom: 20px
   }
 }
 
@@ -37,7 +37,7 @@ $main-size: 16px;
 
 /*-----------------------------------*/
 header {
-  position: fixed ;
+  position: fixed;
   background-color: rgba(27, 30, 33, 0.85);
   top: 0;
   width: 100%;
@@ -92,6 +92,7 @@ header {
           }
 
         }
+
         @include max-screen(992px) {
           .nav-link {
             &:after {
@@ -121,10 +122,6 @@ header {
   }
 }
 
-/* .navbar-light .navbar-toggler-icon {
-   background-image: none;
- }*/
-
 /*-----------------------*/
 .upper {
   background: url('../images/bg_upper.jpg') no-repeat fixed center;
@@ -143,13 +140,15 @@ header {
       margin: auto;
       width: 500px;
       flex-direction: column;
-      h1{
+
+      h1 {
         font-family: $font-main;
         font-size: 36px;
-        span{
+
+        span {
+          font-family: $font-sub2;
           color: yellow;
           font-weight: 300;
-
         }
       }
     }
@@ -170,10 +169,26 @@ header {
     border-radius: .6rem;
     color: #fff;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-bottom: 40px;
+    &:before{
+      content: "\f019";
+      display: inline-block;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: #fff;
+      font-size: 14px;
+      padding-right: 8px;
+      &:hover {
+        color: yellow;
+      }
+    }
 
-    &:hover, .active {
+    &:hover{
       color: yellow;
       border: 1px solid yellow;
+      &:before{
+        color: yellow;
+      }
     }
   }
 
@@ -183,8 +198,38 @@ header {
     color: #fff;
     text-decoration: none;
 
+
   }
 
+  .jump {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(244, 241, 9, 0.92);
+    border: 1px solid rgba(244, 241, 9, 0.25);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -20px;
+
+    &:after {
+      content: "\f103";
+      display: block;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: rgba(27, 30, 33, 0.85);
+      font-size: 24px;
+      padding-top: 3px;
+      padding-left: 12px;
+    }
+
+    &:hover {
+      animation: jump;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+    }
+  }
 
 }
 
