@@ -1,7 +1,7 @@
 @import "bootstrap-reboot.min.css";
 @import "bootstrap-grid.min.css";
 @import "bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Open+Sans&family=Raleway:wght@700&display=swap');
 
 /*--VAR-*/
 $font-main: 'Open Sans', sans-serif;
@@ -34,6 +34,22 @@ $main-size: 16px;
   width: 100%;
 }
 
+h3 {
+  font-family: $font-sub2;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d2124;
+
+  &:after {
+    display: block;
+    content: "";
+    width: 10%;
+    margin: auto;
+    margin-top: 10px;
+    height: 3px;
+    background-color: yellow;
+  }
+}
 
 /*-----------------------------------*/
 header {
@@ -130,7 +146,6 @@ header {
   position: relative;
   z-index: 1;
 
-
   .bg-rgba {
     height: 100vh;
     display: flex;
@@ -170,7 +185,8 @@ header {
     color: #fff;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     margin-bottom: 40px;
-    &:before{
+
+    &:before {
       content: "\f019";
       display: inline-block;
       font-family: "Font Awesome 5 Free";
@@ -178,15 +194,17 @@ header {
       color: #fff;
       font-size: 14px;
       padding-right: 8px;
+
       &:hover {
         color: yellow;
       }
     }
 
-    &:hover{
+    &:hover {
       color: yellow;
       border: 1px solid yellow;
-      &:before{
+
+      &:before {
         color: yellow;
       }
     }
@@ -197,8 +215,6 @@ header {
     font-family: $font-main;
     color: #fff;
     text-decoration: none;
-
-
   }
 
   .jump {
@@ -230,7 +246,102 @@ header {
       animation-timing-function: linear;
     }
   }
-
 }
 
+/*------About------------------------------------*/
+.about {
+  background-color: #f3f3f3;
+  padding: 80px 15px 80px;
 
+  .my-foto {
+    max-width: 200px;
+
+    img {
+      display: block;
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 20px;
+    }
+  }
+
+  .my-info {
+    .item {
+      .icon {
+        width: 40px;
+        height: 50px;
+        background-color: yellow;
+        border: 1px solid rgba(76, 75, 92, 0.89);;
+        border-radius: 5px;
+
+        &:before {
+          display: block;
+          content: "\f007";
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+          color: rgba(76, 75, 92, 0.89);
+          font-size: 24px;
+          padding-top: 3px;
+        }
+      }
+
+      &:nth-of-type(2) .icon {
+        &:before {
+          content: "\f06b";
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+        }
+      }
+      &:nth-of-type(3) .icon {
+        &:before {
+          content: "\f0c0";
+          font-weight: 900;
+          font-family: "Font Awesome 5 Free";
+        }
+      }
+
+      p {
+        font-family: $font-sub;
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 0;
+        white-space: nowrap;
+
+        &:nth-of-type(2) {
+          letter-spacing: 0;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      .item {
+        .icon {
+          &:before {
+            content: "\f015";
+          }
+        }
+
+        &:nth-of-type(2) {
+          .icon {
+            &:before {
+              content: "\f3cd";
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          .icon {
+            &:before {
+              content: "\f0e0";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--------------Education-----------------------*/
+.education{
+  background: url(../images/b);
+}

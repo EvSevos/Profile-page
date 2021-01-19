@@ -1,7 +1,7 @@
 @import url(bootstrap-reboot.min.css);
 @import url(bootstrap-grid.min.css);
 @import url(bootstrap.min.css);
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&family=Raleway:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Open+Sans&family=Raleway:wght@700&display=swap");
 /*--VAR-*/
 @keyframes jump {
   0% {
@@ -13,6 +13,20 @@
   background-color: rgba(76, 75, 92, 0.89);
   color: #fff;
   width: 100%; }
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d2124; }
+  h3:after {
+    display: block;
+    content: "";
+    width: 10%;
+    margin: auto;
+    margin-top: 10px;
+    height: 3px;
+    background-color: yellow; }
 
 /*-----------------------------------*/
 header {
@@ -144,5 +158,59 @@ header {
       animation: jump;
       animation-duration: 1s;
       animation-timing-function: linear; }
+
+/*------About------------------------------------*/
+.about {
+  background-color: #f3f3f3;
+  padding: 80px 15px 80px; }
+  .about .my-foto {
+    max-width: 200px; }
+    .about .my-foto img {
+      display: block;
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 20px; }
+  .about .my-info .item .icon {
+    width: 40px;
+    height: 50px;
+    background-color: yellow;
+    border: 1px solid rgba(76, 75, 92, 0.89);
+    border-radius: 5px; }
+    .about .my-info .item .icon:before {
+      display: block;
+      content: "\f007";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      color: rgba(76, 75, 92, 0.89);
+      font-size: 24px;
+      padding-top: 3px; }
+  .about .my-info .item:nth-of-type(2) .icon:before {
+    content: "\f06b";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free"; }
+  .about .my-info .item:nth-of-type(3) .icon:before {
+    content: "\f0c0";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free"; }
+  .about .my-info .item p {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 0;
+    white-space: nowrap; }
+    .about .my-info .item p:nth-of-type(2) {
+      letter-spacing: 0;
+      font-size: 18px; }
+  .about .my-info:nth-of-type(3) .item .icon:before {
+    content: "\f015"; }
+  .about .my-info:nth-of-type(3) .item:nth-of-type(2) .icon:before {
+    content: "\f3cd"; }
+  .about .my-info:nth-of-type(3) .item:nth-of-type(3) .icon:before {
+    content: "\f0e0"; }
+
+/*--------------Education-----------------------*/
+.education {
+  background: url(../images/b); }
 
 /*# sourceMappingURL=style.css.map */
