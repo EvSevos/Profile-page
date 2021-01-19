@@ -262,6 +262,9 @@ header {
       border: 1px solid transparent;
       border-radius: 20px;
     }
+    @include max-screen(992px){
+      width: 100%;
+    }
   }
 
   .my-info {
@@ -342,6 +345,35 @@ header {
 }
 
 /*--------------Education-----------------------*/
-.education{
-  background: url(../images/b);
+.education {
+  background: url(../images/bg_education.jpg) no-repeat;
+  background-size: cover;
+  @include max-screen(768px){
+    background: url('../images/bg_education_mob_02.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .bg-rgba {
+    background-color: rgba(76, 75, 92, 0.62);
+    padding: 80px 15px;
+
+    h3 {
+      color: #fff;
+    }
+    ul{
+     list-style: none;
+      li{
+        color: #ffffff;
+        &:before{
+          display: inline-block;
+           content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: yellow;
+          margin-right: 20px;
+
+        }
+      }
+    }
+  }
 }

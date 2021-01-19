@@ -170,6 +170,9 @@ header {
       width: 100%;
       border: 1px solid transparent;
       border-radius: 20px; }
+    @media screen and (max-width: 992px) {
+      .about .my-foto {
+        width: 100%; } }
   .about .my-info .item .icon {
     width: 40px;
     height: 50px;
@@ -211,6 +214,27 @@ header {
 
 /*--------------Education-----------------------*/
 .education {
-  background: url(../images/b); }
+  background: url(../images/bg_education.jpg) no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .education {
+      background: url("../images/bg_education_mob_02.jpg") no-repeat;
+      background-size: cover; } }
+  .education .bg-rgba {
+    background-color: rgba(76, 75, 92, 0.62);
+    padding: 80px 15px; }
+    .education .bg-rgba h3 {
+      color: #fff; }
+    .education .bg-rgba ul {
+      list-style: none; }
+      .education .bg-rgba ul li {
+        color: #ffffff; }
+        .education .bg-rgba ul li:before {
+          display: inline-block;
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: yellow;
+          margin-right: 20px; }
 
 /*# sourceMappingURL=style.css.map */
