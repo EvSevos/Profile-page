@@ -557,8 +557,9 @@ header {
   .item {
     p {
       color: rgba(76, 75, 92, 0.89);
-      font: 18px/18px $font-sub ;
+      font: 18px/18px $font-sub;
       font-weight: 600;
+
       &:before {
         display: inline-block;
         content: "\f3c5";
@@ -571,40 +572,50 @@ header {
       }
     }
 
-    &:nth-of-type(2) p{
+    &:nth-of-type(2) p {
       &:before {
         content: "\f095";
       }
     }
-    &:nth-of-type(3) p{
+
+    &:nth-of-type(3) p {
       &:before {
         content: "\f0e0";
       }
     }
   }
-form {
-  input {
-    color: rgba(76, 75, 92, 0.89);
-    width: 100%;
-    padding: 5px 15px;
-    margin-bottom: 20px;
-    border: 1px solid  #d9dbcf;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 5px 1px #f9f556;
-    box-shadow: 0 0 5px 1px #f9f556;
-    &:nth-of-type(2){
-      margin-top: 20px;
-      margin-bottom: 0px;
+
+  form {
+    .box{
+      margin-bottom: 20px;
+    input {
+      color: rgba(76, 75, 92, 0.89);
+      width: 100%;
+      padding: 5px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #d9dbcf;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 0 5px 1px #f9f556;
+      box-shadow: 0 0 5px 1px #f9f556;
+
+      &:nth-of-type(2) {
+        margin-top: 20px;
+        margin-bottom: 0px;
+
+      }
+    }
+    }
+
+
+    textarea {
+      color: rgba(76, 75, 92, 0.89);
+      width: 100%;
+      resize: none;
+      border: 1px solid #d9dbcf;
+      border-radius: 5px;
+      -webkit-box-shadow: 0 0 5px 1px #f9f556;
+      box-shadow: 0 0 5px 1px #f9f556;
     }
   }
-textarea{
-  color: rgba(76, 75, 92, 0.89);
 
-  resize: none;
-  border: 1px solid  #d9dbcf;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 1px #f9f556;
-  box-shadow: 0 0 5px 1px #f9f556;
-}
-}
 }
