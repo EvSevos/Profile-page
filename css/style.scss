@@ -272,7 +272,8 @@ header {
       border: 1px solid transparent;
       border-radius: 20px;
     }
-    @include max-screen(992px){
+
+    @include max-screen(992px) {
       width: 100%;
     }
   }
@@ -304,6 +305,7 @@ header {
           font-family: "Font Awesome 5 Free";
         }
       }
+
       &:nth-of-type(3) .icon {
         &:before {
           content: "\f0c0";
@@ -327,7 +329,7 @@ header {
       }
     }
 
-    &:nth-of-type(3) {
+    &:nth-of-type(2) {
       .item {
         .icon {
           &:before {
@@ -342,6 +344,7 @@ header {
             }
           }
         }
+
         &:nth-of-type(3) {
           .icon {
             &:before {
@@ -358,7 +361,7 @@ header {
 .education {
   background: url(../images/bg_education.jpg) no-repeat;
   background-size: cover;
-  @include max-screen(768px){
+  @include max-screen(768px) {
     background: url('../images/bg_education_mob_02.jpg') no-repeat;
     background-size: cover;
   }
@@ -370,44 +373,12 @@ header {
     h3 {
       color: #fff;
     }
-    ul{
-     list-style: none;
-      li{
-        color: #ffffff;
-        &:before{
-          display: inline-block;
-           content: "\f00c";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          color: yellow;
-          margin-right: 20px;
 
-        }
-      }
-    }
-  }
-}
-
-/*---------------Skills---------------------------*/
-.skills{
-  background-color: #f3f3f3;
-  padding: 80px 15px 80px;
-
-  .card{
-    background: #fff;
-    padding: 20px 15px 0;
-
-    img{
-      width: 100px;
-      height: 100px;
-    }
     ul {
       list-style: none;
-      padding-left: 20px;
 
       li {
-        color: #1d2124;
-        white-space:nowrap;
+        color: #ffffff;
 
         &:before {
           display: inline-block;
@@ -421,25 +392,123 @@ header {
       }
     }
   }
+}
+
+/*---------------Skills---------------------------*/
+.skills {
+  background-color: #f3f3f3;
+  padding: 80px 15px 80px;
+
+  .card {
+    background: #fff;
+    padding: 20px 15px 0;
+
+    img {
+      width: 100px;
+      height: 100px;
+      @include max-screen(767px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+      @include max-screen(767px) {
+        padding-left: 0px;
+      }
+
+      li {
+        color: #1d2124;
+        white-space: nowrap;
+
+        &:before {
+          display: inline-block;
+          content: "\f00c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: yellow;
+          margin-right: 20px;
+
+        }
+      }
+    }
+  }
+
   .owl-dots {
-    .owl-dot{
+    visibility: hidden;
+
+    .owl-dot {
       outline: none;
-      span{
+
+      span {
         display: inline-block;
         width: 10px;
         height: 10px;
         border: 1px solid rgba(76, 75, 92, 0.62);
         border-radius: 50%;
         background-color: rgba(76, 75, 92, 0.62);
-        margin: 0 20px;
+        margin: 0 10px;
 
       }
-      &.active      span {
+
+      &.active span {
         border: 1px solid yellow;
         background-color: yellow;
       }
-      }
+    }
+    @include max-screen(776px) {
+      visibility: visible;
+    }
 
+  }
+}
+
+
+.owl-nav {
+  visibility: visible;
+
+  .owl-prev {
+    position: absolute;
+    left: 80px;
+    top: 40%;
+    width: 20px;
+    height: 20px;
+    outline: none;
+
+    &:after {
+      display: block;
+      content: "\f053";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      color: yellow;
+      font-size: 24px;
     }
   }
+
+  .owl-next {
+    position: absolute;
+    right: 80px;
+    top: 40%;
+    width: 20px;
+    height: 20px;
+    outline: none;
+
+    &:after {
+      display: block;
+      content: "\f054";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      color: yellow;
+      font-size: 24px;
+    }
+  }
+
+  @include max-screen(776px) {
+    visibility: hidden;
+  }
+}
+
+/*---------------------------*/
 

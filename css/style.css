@@ -213,11 +213,11 @@ header {
     .about .my-info .item p:nth-of-type(2) {
       letter-spacing: 0;
       font-size: 18px; }
-  .about .my-info:nth-of-type(3) .item .icon:before {
+  .about .my-info:nth-of-type(2) .item .icon:before {
     content: "\f015"; }
-  .about .my-info:nth-of-type(3) .item:nth-of-type(2) .icon:before {
+  .about .my-info:nth-of-type(2) .item:nth-of-type(2) .icon:before {
     content: "\f3cd"; }
-  .about .my-info:nth-of-type(3) .item:nth-of-type(3) .icon:before {
+  .about .my-info:nth-of-type(2) .item:nth-of-type(3) .icon:before {
     content: "\f0e0"; }
 
 /*--------------Education-----------------------*/
@@ -255,9 +255,16 @@ header {
     .skills .card img {
       width: 100px;
       height: 100px; }
+      @media screen and (max-width: 767px) {
+        .skills .card img {
+          width: 60px;
+          height: 60px; } }
     .skills .card ul {
       list-style: none;
       padding-left: 20px; }
+      @media screen and (max-width: 767px) {
+        .skills .card ul {
+          padding-left: 0px; } }
       .skills .card ul li {
         color: #1d2124;
         white-space: nowrap; }
@@ -268,18 +275,59 @@ header {
           font-weight: 900;
           color: yellow;
           margin-right: 20px; }
-  .skills .owl-dots .owl-dot {
+  .skills .owl-dots {
+    visibility: hidden; }
+    .skills .owl-dots .owl-dot {
+      outline: none; }
+      .skills .owl-dots .owl-dot span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid rgba(76, 75, 92, 0.62);
+        border-radius: 50%;
+        background-color: rgba(76, 75, 92, 0.62);
+        margin: 0 10px; }
+      .skills .owl-dots .owl-dot.active span {
+        border: 1px solid yellow;
+        background-color: yellow; }
+    @media screen and (max-width: 776px) {
+      .skills .owl-dots {
+        visibility: visible; } }
+
+.owl-nav {
+  visibility: visible; }
+  .owl-nav .owl-prev {
+    position: absolute;
+    left: 80px;
+    top: 40%;
+    width: 20px;
+    height: 20px;
     outline: none; }
-    .skills .owl-dots .owl-dot span {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border: 1px solid rgba(76, 75, 92, 0.62);
-      border-radius: 50%;
-      background-color: rgba(76, 75, 92, 0.62);
-      margin: 0 20px; }
-    .skills .owl-dots .owl-dot.active span {
-      border: 1px solid yellow;
-      background-color: yellow; }
+    .owl-nav .owl-prev:after {
+      display: block;
+      content: "\f053";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      color: yellow;
+      font-size: 24px; }
+  .owl-nav .owl-next {
+    position: absolute;
+    right: 80px;
+    top: 40%;
+    width: 20px;
+    height: 20px;
+    outline: none; }
+    .owl-nav .owl-next:after {
+      display: block;
+      content: "\f054";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      color: yellow;
+      font-size: 24px; }
+  @media screen and (max-width: 776px) {
+    .owl-nav {
+      visibility: hidden; } }
+
+/*---------------------------*/
 
 /*# sourceMappingURL=style.css.map */
