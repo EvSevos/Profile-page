@@ -463,50 +463,49 @@ header {
       visibility: visible;
     }
   }
-}
 
+  .owl-nav {
+    visibility: visible;
 
-.owl-nav {
-  visibility: visible;
+    .owl-prev {
+      position: absolute;
+      left: 80px;
+      top: 40%;
+      width: 20px;
+      height: 20px;
+      outline: none;
 
-  .owl-prev {
-    position: absolute;
-    left: 80px;
-    top: 40%;
-    width: 20px;
-    height: 20px;
-    outline: none;
-
-    &:after {
-      display: block;
-      content: "\f053";
-      font-weight: 900;
-      font-family: "Font Awesome 5 Free";
-      color: yellow;
-      font-size: 24px;
+      &:after {
+        display: block;
+        content: "\f053";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        color: rgba(76, 75, 92, 0.89);
+        font-size: 24px;
+      }
     }
-  }
 
-  .owl-next {
-    position: absolute;
-    right: 80px;
-    top: 40%;
-    width: 20px;
-    height: 20px;
-    outline: none;
+    .owl-next {
+      position: absolute;
+      right: 80px;
+      top: 40%;
+      width: 20px;
+      height: 20px;
+      outline: none;
 
-    &:after {
-      display: block;
-      content: "\f054";
-      font-weight: 900;
-      font-family: "Font Awesome 5 Free";
-      color: yellow;
-      font-size: 24px;
+      &:after {
+        display: block;
+        content: "\f054";
+        font-weight: 900;
+        font-family: "Font Awesome 5 Free";
+        color: rgba(76, 75, 92, 0.89);
+        font-size: 24px;
+      }
     }
-  }
 
-  @include max-screen(776px) {
-    visibility: hidden;
+    @include max-screen(776px) {
+      visibility: hidden;
+    }
   }
 }
 
@@ -586,36 +585,80 @@ header {
   }
 
   form {
-    .box{
-      margin-bottom: 20px;
-    input {
-      color: rgba(76, 75, 92, 0.89);
-      width: 100%;
-      padding: 5px 15px;
-      margin-bottom: 20px;
-      border: 1px solid #d9dbcf;
-      border-radius: 5px;
-      -webkit-box-shadow: 0 0 5px 1px #f9f556;
-      box-shadow: 0 0 5px 1px #f9f556;
 
-      &:nth-of-type(2) {
-        margin-top: 20px;
-        margin-bottom: 0px;
+    .box {
+      margin-bottom: 40px;
+      @include max-screen(767px) {
+        margin-bottom: 40px;
+      }
 
+      input {
+        color: rgba(76, 75, 92, 0.89);
+        width: 100%;
+        padding: 5px 15px;
+        margin-bottom: 20px;
+        border: 1px solid #d9dbcf;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0 5px 1px #f9f556;
+        box-shadow: 0 0 5px 1px #f9f556;
+        outline: none;
+
+        &:focus {
+          -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+          box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+        }
+
+        &:nth-of-type(2) {
+          margin-top: 20px;
+          margin-bottom: 0px;
+        }
       }
     }
-    }
-
 
     textarea {
+      outline: none;
       color: rgba(76, 75, 92, 0.89);
       width: 100%;
+      height: 112px;
       resize: none;
       border: 1px solid #d9dbcf;
       border-radius: 5px;
       -webkit-box-shadow: 0 0 5px 1px #f9f556;
       box-shadow: 0 0 5px 1px #f9f556;
+
+      &:focus {
+        -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+        box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+      }
+    }
+
+    button{
+      width: 100%;
+      padding: 12px 45px;
+      border: 1px solid #d9dbcf;
+      border-radius: 5px;
+      background-color:rgba(76, 75, 92, 0.81);
+      color: #f3f3f3;
+      font-family: $font-sub2;
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 3px;
+      outline: none;
+      -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+      box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+
+      &:focus{
+        color: #f9f556;
+        background-color:rgba(76, 75, 92, 0.81);
+        -webkit-box-shadow: 0 0 5px 1px #f9f556;
+        box-shadow: 0 0 5px 1px #f9f556;
+      }
+      &:hover{
+        color: #f9f556;
+        background-color:rgba(76, 75, 92, 0.81);
+        -webkit-box-shadow: 0 0 5px 1px #f9f556;
+        box-shadow: 0 0 5px 1px #f9f556;
+      }
     }
   }
-
 }
