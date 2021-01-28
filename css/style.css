@@ -50,9 +50,11 @@ header {
     font-family: "Raleway", sans-serif;
     font-size: 12px; }
     header .navbar .navbar-brand:hover {
-      color: red; }
+      color: #f9f556; }
     header .navbar .navbar-brand.active {
-      color: red; }
+      color: #f9f556; }
+  header .navbar .navbar-nav .nav-item:active .nav-link {
+    color: #e83e8c; }
   header .navbar .navbar-nav .nav-item .nav-link {
     color: #fff;
     text-transform: uppercase;
@@ -67,9 +69,9 @@ header {
       visibility: hidden;
       margin-left: 10%;
       background-color: yellow; }
-    header .navbar .navbar-nav .nav-item .nav-link:hover, header .navbar .navbar-nav .nav-item .nav-link .active {
+    header .navbar .navbar-nav .nav-item .nav-link:hover {
       color: yellow; }
-      header .navbar .navbar-nav .nav-item .nav-link:hover:after, header .navbar .navbar-nav .nav-item .nav-link .active:after {
+      header .navbar .navbar-nav .nav-item .nav-link:hover:after {
         visibility: visible; }
   @media screen and (max-width: 992px) {
     header .navbar .navbar-nav .nav-item .nav-link:after {
@@ -80,6 +82,8 @@ header {
       color: yellow; }
       header .navbar .navbar-nav .nav-item .nav-link:hover:after, header .navbar .navbar-nav .nav-item .nav-link .active:after {
         visibility: visible; } }
+  header .navbar .navbar-nav.active .nav-link {
+    color: #e83e8c; }
   header .navbar .navbar-toggler {
     color: #fff;
     border-color: #fff;
@@ -428,5 +432,41 @@ header {
       background-color: rgba(76, 75, 92, 0.81);
       -webkit-box-shadow: 0 0 5px 1px #f9f556;
       box-shadow: 0 0 5px 1px #f9f556; }
+
+/*---------footer-----------*/
+footer {
+  background-color: rgba(27, 30, 33, 0.9);
+  padding: 20px; }
+  footer a {
+    display: inline-block;
+    text-decoration: none;
+    width: 30px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 5px;
+    border-bottom: #f3f3f3 2px solid;
+    border-top: #f3f3f3 2px solid; }
+    footer a:hover {
+      text-decoration: none;
+      border-bottom: #f9f556 2px solid;
+      border-top: #f9f556 2px solid; }
+    footer a:before {
+      content: "\f39e";
+      color: #f3f3f3;
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 400;
+      font-size: 24px;
+      display: block;
+      padding-left: 10px; }
+    footer a:nth-of-type(2):before {
+      content: "\f16d";
+      font-weight: 900;
+      padding-left: 5px; }
+    footer a:nth-of-type(3):before {
+      content: "\f0e1";
+      font-weight: 900;
+      padding-left: 5px; }
+    footer a:hover:before {
+      color: #f9f556; }
 
 /*# sourceMappingURL=style.css.map */
