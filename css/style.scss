@@ -50,7 +50,7 @@ h3 {
     margin: auto;
     margin-top: 10px;
     height: 3px;
-    background-color: yellow;
+    background-color: #e4c547;
   }
 }
 
@@ -81,21 +81,16 @@ header {
       font-size: 12px;
 
       &:hover {
-        color: #f9f556;
+        color: #e4c547;
       }
 
       &.active {
-        color: #f9f556;
+        color: #e4c547;
       }
     }
 
     .navbar-nav {
       .nav-item {
-        &:active {
-          .nav-link {
-            color: #e83e8c;
-          }
-        }
         .nav-link {
           color: #fff;
           text-transform: uppercase;
@@ -110,11 +105,11 @@ header {
             margin-top: 5px;
             visibility: hidden;
             margin-left: 10%;
-            background-color: yellow;
+            background-color: #e4c547;
           }
 
           &:hover, {
-            color: yellow;
+            color: #e4c547;
 
             &:after {
               visibility: visible;
@@ -122,6 +117,14 @@ header {
             }
           }
 
+          &.active {
+            color: #e4c547;
+
+            &:after {
+              visibility: visible;
+              color: #e4c547;
+            }
+          }
         }
 
         @include max-screen(992px) {
@@ -133,7 +136,7 @@ header {
             }
 
             &:hover, .active {
-              color: yellow;
+              color: #e4c547;
 
               &:after {
                 visibility: visible;
@@ -143,13 +146,6 @@ header {
           }
         }
       }
-
-      &.active {
-        .nav-link {
-          color: #e83e8c;
-        }
-      }
-
     }
 
 
@@ -186,7 +182,7 @@ header {
 
         span {
           font-family: $font-sub2;
-          color: yellow;
+          color: #e4c547;
           font-weight: 300;
         }
       }
@@ -199,6 +195,18 @@ header {
     height: 100vh;
   }
 
+  button {
+    outline: none;
+
+    &:active {
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   .btn {
     display: inline-block;
     border: 1px solid #ffffff;
@@ -207,8 +215,9 @@ header {
     line-height: 1.5;
     border-radius: .6rem;
     color: #fff;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
     margin-bottom: 40px;
+    outline: none;
 
     &:before {
       content: "\f019";
@@ -218,19 +227,30 @@ header {
       color: #fff;
       font-size: 14px;
       padding-right: 8px;
-
-      &:hover {
-        color: yellow;
-      }
     }
 
     &:hover {
-      color: yellow;
-      border: 1px solid yellow;
+      color: #e4c547;
+      border: 1px solid #e4c547;
 
       &:before {
-        color: yellow;
+        color: #e4c547;
       }
+    }
+
+    &:active {
+      color: rgba(27, 30, 33, 0.85);
+      background-color: #e4c547;
+      border: 1px solid #e4c547;
+      outline: none;
+
+      &:before {
+        color: rgba(27, 30, 33, 0.85);
+      }
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 
@@ -245,7 +265,7 @@ header {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: rgba(244, 241, 9, 0.92);
+    background-color: #e4c547;
     border: 1px solid rgba(244, 241, 9, 0.25);
     border-radius: 50%;
     position: absolute;
@@ -297,7 +317,7 @@ header {
       .icon {
         width: 40px;
         height: 50px;
-        background-color: yellow;
+        background-color: #e4c547;
         border: 1px solid rgba(76, 75, 92, 0.89);;
         border-radius: 5px;
 
@@ -322,9 +342,7 @@ header {
 
       &:nth-of-type(3) .icon {
         &:before {
-          content: "\f0c0";
-          font-weight: 900;
-          font-family: "Font Awesome 5 Free";
+          content: "\f015";
         }
       }
 
@@ -376,7 +394,7 @@ header {
   background: url(../images/bg_education.jpg) no-repeat;
   background-size: cover;
   @include max-screen(768px) {
-    background: url('../images/bg_education_mob_02.jpg') no-repeat;
+    background: url('../images/bg_edu_mob_02.jpg') no-repeat;
     background-size: cover;
   }
 
@@ -399,7 +417,7 @@ header {
           content: "\f00c";
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
-          color: yellow;
+          color: #e4c547;
           margin-right: 20px;
 
         }
@@ -442,7 +460,7 @@ header {
           content: "\f00c";
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
-          color: yellow;
+          color: #e4c547;
           margin-right: 20px;
 
         }
@@ -468,8 +486,8 @@ header {
       }
 
       &.active span {
-        border: 1px solid yellow;
-        background-color: yellow;
+        border: 1px solid #e4c547;
+        background-color: #e4c547;
       }
     }
 
@@ -554,8 +572,8 @@ header {
 
       &:hover {
         color: #fbfad9;
-        border-bottom: 2px solid #f9f556;
-        border-top: 2px solid #f9f556;
+        border-bottom: 2px solid #e4c547;
+        border-top: 2px solid #e4c547;
         border-radius: 20% 20% 20% 20%;
       }
     }
@@ -611,8 +629,8 @@ header {
         margin-bottom: 40px;
         border: 1px solid #d9dbcf;
         border-radius: 5px;
-        -webkit-box-shadow: 0 0 5px 1px #f9f556;
-        box-shadow: 0 0 5px 1px #f9f556;
+        -webkit-box-shadow: 0 0 5px 1px #e4c547;
+        box-shadow: 0 0 5px 1px #e4c547;
         outline: none;
 
         &:focus {
@@ -628,19 +646,25 @@ header {
     }
 
     textarea {
-      outline: none;
       color: rgba(76, 75, 92, 0.89);
       width: 100%;
       height: 115px;
       resize: none;
       border: 1px solid #d9dbcf;
       border-radius: 5px;
-      -webkit-box-shadow: 0 0 5px 1px #f9f556;
-      box-shadow: 0 0 5px 1px #f9f556;
-
+      -webkit-box-shadow: 0 0 5px 1px #e4c547;
+      box-shadow: 0 0 5px 1px #e4c547;
+      outline: none!important;
       &:focus {
         -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
         box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+        outline: none!important;
+      }
+
+      &:active {
+        -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+        box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
+        outline: none!important;
       }
     }
 
@@ -660,17 +684,17 @@ header {
       box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
 
       &:focus {
-        color: #f9f556;
+        color: #e4c547;
         background-color: rgba(76, 75, 92, 0.81);
-        -webkit-box-shadow: 0 0 5px 1px #f9f556;
-        box-shadow: 0 0 5px 1px #f9f556;
+        -webkit-box-shadow: 0 0 5px 1px #e4c547;
+        box-shadow: 0 0 5px 1px #e4c547;
       }
 
       &:hover {
-        color: #f9f556;
+        color: #e4c547;
         background-color: rgba(76, 75, 92, 0.81);
-        -webkit-box-shadow: 0 0 5px 1px #f9f556;
-        box-shadow: 0 0 5px 1px #f9f556;
+        -webkit-box-shadow: 0 0 5px 1px #e4c547;
+        box-shadow: 0 0 5px 1px #e4c547;
       }
     }
   }
@@ -690,10 +714,11 @@ footer {
     border-radius: 5px;
     border-bottom: #f3f3f3 2px solid;
     border-top: #f3f3f3 2px solid;
-    &:hover{
+
+    &:hover {
       text-decoration: none;
-      border-bottom: #f9f556 2px solid;
-      border-top: #f9f556 2px solid;
+      border-bottom: #e4c547 2px solid;
+      border-top: #e4c547 2px solid;
     }
 
     &:before {
@@ -721,9 +746,10 @@ footer {
         padding-left: 5px;
       }
     }
+
     &:hover {
       &:before {
-        color: #f9f556;
+        color: #e4c547;
       }
     }
   }
