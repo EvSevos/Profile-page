@@ -117,12 +117,10 @@ header {
       background: url("../images/bg_upper_mob_03.jpg") no-repeat fixed center;
       background-size: cover;
       height: 100vh; } }
-  .upper button {
+  .upper button:active {
     outline: none; }
-    .upper button:active {
-      outline: none; }
-    .upper button:focus {
-      outline: none; }
+  .upper button:focus {
+    outline: none; }
   .upper .btn {
     display: inline-block;
     border: 1px solid #ffffff;
@@ -132,8 +130,7 @@ header {
     border-radius: .6rem;
     color: #fff;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
-    margin-bottom: 40px;
-    outline: none; }
+    margin-bottom: 40px; }
     .upper .btn:before {
       content: "\f019";
       display: inline-block;
@@ -147,15 +144,23 @@ header {
       border: 1px solid #e4c547; }
       .upper .btn:hover:before {
         color: #e4c547; }
-    .upper .btn:active {
+    .upper .btn:focus {
       color: rgba(27, 30, 33, 0.85);
       background-color: #e4c547;
       border: 1px solid #e4c547;
-      outline: none; }
+      outline: 0 !important;
+      outline-color: transparent !important;
+      outline-width: 0 !important;
+      outline-style: none !important;
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important; }
+      .upper .btn:focus:before {
+        color: rgba(27, 30, 33, 0.85); }
+    .upper .btn:active {
+      color: rgba(27, 30, 33, 0.85);
+      background-color: #e4c547;
+      border: 1px solid #e4c547; }
       .upper .btn:active:before {
         color: rgba(27, 30, 33, 0.85); }
-    .upper .btn:focus {
-      outline: none; }
   .upper .btn-link {
     font-weight: 400;
     font-family: "Open Sans", sans-serif;
@@ -427,12 +432,12 @@ header {
       border: 1px solid #d9dbcf;
       -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
       box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
-      outline: none !important; }
+      outline: none; }
     .contacts form textarea:active {
       border: 1px solid #d9dbcf;
       -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
       box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
-      outline: none !important; }
+      outline: none; }
   .contacts form button {
     width: 100%;
     padding: 12px 45px;
