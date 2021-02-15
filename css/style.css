@@ -213,7 +213,7 @@ header {
       font-family: "Font Awesome 5 Free";
       color: rgba(76, 75, 92, 0.89);
       font-size: 24px;
-      padding-top: 3px; }
+      padding-top: 5px; }
   .about .my-info .item:nth-of-type(2) .icon:before {
     content: "\f06b";
     font-weight: 900;
@@ -231,11 +231,17 @@ header {
       letter-spacing: 0;
       font-size: 18px; }
   .about .my-info:nth-of-type(2) .item .icon:before {
-    content: "\f015"; }
+    content: "\f17e";
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400; }
   .about .my-info:nth-of-type(2) .item:nth-of-type(2) .icon:before {
-    content: "\f3cd"; }
+    content: "\f3cd";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free"; }
   .about .my-info:nth-of-type(2) .item:nth-of-type(3) .icon:before {
-    content: "\f0e0"; }
+    content: "\f0e0";
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free"; }
 
 /*--------------Education-----------------------*/
 .education {
@@ -416,13 +422,14 @@ header {
     border: 1px solid #d9dbcf;
     border-radius: 5px;
     -webkit-box-shadow: 0 0 5px 1px #e4c547;
-    box-shadow: 0 0 5px 1px #e4c547;
-    outline: none !important; }
+    box-shadow: 0 0 5px 1px #e4c547; }
     .contacts form textarea:focus {
+      border: 1px solid #d9dbcf;
       -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
       box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
       outline: none !important; }
     .contacts form textarea:active {
+      border: 1px solid #d9dbcf;
       -webkit-box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
       box-shadow: 1px 1px 5px 1px rgba(76, 75, 92, 0.81);
       outline: none !important; }
