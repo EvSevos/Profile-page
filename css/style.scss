@@ -108,23 +108,24 @@ header {
             background-color: #e4c547;
           }
 
-          &:hover, {
-            color: #e4c547;
+          
+                    &:hover, {
+                      color: #e4c547;
 
-            &:after {
-              visibility: visible;
+                      &:after {
+                        visibility: visible;
 
-            }
-          }
+                      }
+                    }
 
-          &.active {
-            color: #e4c547;
+                    &.active {
+                      color: #e4c547;
 
-            &:after {
-              visibility: visible;
-              color: #e4c547;
-            }
-          }
+                      &:after {
+                        visibility: visible;
+                        color: #e4c547;
+                      }
+                    }
         }
 
         @include max-screen(992px) {
@@ -145,6 +146,9 @@ header {
             }
           }
         }
+
+
+
       }
     }
 
@@ -242,12 +246,11 @@ header {
       color: rgba(27, 30, 33, 0.85);
       background-color: #e4c547;
       border: 1px solid #e4c547;
-      outline: 0!important;
-      outline-color: transparent!important;
-      outline-width: 0!important;
-      outline-style: none!important;
-      box-shadow: 0 0 0 0 rgba(0,123,255,0)!important;
-
+      outline: 0 !important;
+      outline-color: transparent !important;
+      outline-width: 0 !important;
+      outline-style: none !important;
+      box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 
 
       &:before {
