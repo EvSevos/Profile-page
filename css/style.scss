@@ -198,6 +198,7 @@ header {
     background: url('../images/bg_upper_mob_03.jpg') no-repeat fixed center;
     background-size: cover;
     height: 100vh;
+    transition: height 250ms 600s;
   }
 
   button {
