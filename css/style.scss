@@ -169,6 +169,7 @@ header {
   height: 100vh;
   position: relative;
   z-index: 1;
+  transition: height 250ms 600s;
 
   .bg-rgba {
     height: 100vh;
